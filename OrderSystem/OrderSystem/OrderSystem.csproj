@@ -8,7 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\images\Baner.jpg" />
+    <None Remove="Assets\images\bg.jpg" />
+    <None Remove="Assets\images\burger.jpeg" />
+    <None Remove="Assets\images\food.jpg" />
+    <None Remove="Assets\images\foodBG.jpg" />
+    <None Remove="Assets\images\history1.jpg" />
+    <None Remove="Assets\images\money.jpg" />
     <None Remove="Assets\images\reg.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\images\bg.jpg" />
+    <Resource Include="Assets\images\burger.jpeg" />
+    <Resource Include="Assets\images\history1.jpg" />
+    <Resource Include="Assets\images\money.jpg" />
   </ItemGroup>
 
   <ItemGroup>

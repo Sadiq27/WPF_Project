@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
+
 namespace OrderSystem
 {
     public partial class MainWindow : Window
@@ -50,11 +51,14 @@ namespace OrderSystem
                 try
                 {
                     string jsonString = File.ReadAllText("users.json");
-                    User storedUser = JsonSerializer.Deserialize<User>(jsonString);
+                    User? storedUser = JsonSerializer.Deserialize<User>(jsonString);
 
                     if (storedUser != null && storedUser.Username == username && storedUser.Password == password)
                     {
                         MessageBox.Show("Login successful");
+                        Dashboard dashboard = new Dashboard();
+                        dashboard.Show();
+                        Close();
                     }
                     else
                     {
