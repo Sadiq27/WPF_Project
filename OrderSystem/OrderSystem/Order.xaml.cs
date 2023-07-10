@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,27 +15,32 @@ using System.Windows.Shapes;
 
 namespace OrderSystem
 {
-    public partial class Dashboard : Window
+    public partial class Order : Window
     {
-        public Dashboard()
+        public Order()
         {
             InitializeComponent();
+            this.DataContext = this;
         }
-        private void Order_Click(object sender, RoutedEventArgs e)
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-            Order order = new Order();
-            order.Show();
+
+        }
+
+        //private void NextButton_Click(object sender, RoutedEventArgs e)
+        //{
+
+        //}
+
+        private void PrevButton_Click(object sender, RoutedEventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
             Close();
         }
 
-        private void HistoryOrder_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
 
-        private void TotalOrders_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
     }
 }
