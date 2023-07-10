@@ -11,24 +11,32 @@
     <None Remove="Assets\images\Baner.jpg" />
     <None Remove="Assets\images\bg.jpg" />
     <None Remove="Assets\images\burger.jpeg" />
+    <None Remove="Assets\images\burger.jpg" />
+    <None Remove="Assets\images\dr.png" />
     <None Remove="Assets\images\food.jpg" />
     <None Remove="Assets\images\foodBG.jpg" />
     <None Remove="Assets\images\history1.jpg" />
     <None Remove="Assets\images\money.jpg" />
+    <None Remove="Assets\images\pizza.png" />
     <None Remove="Assets\images\reg.jpeg" />
+    <None Remove="Assets\images\sushi.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Assets\images\bg.jpg" />
     <Resource Include="Assets\images\burger.jpeg" />
+    <Resource Include="Assets\images\burger.jpg" />
+    <Resource Include="Assets\images\dr.png" />
     <Resource Include="Assets\images\history1.jpg" />
     <Resource Include="Assets\images\money.jpg" />
+    <Resource Include="Assets\images\pizza.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Assets\images\reg.jpeg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\images\sushi.jpg" />
   </ItemGroup>
 
 </Project>

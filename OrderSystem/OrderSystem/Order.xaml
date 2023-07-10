@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Order" Height="450" Width="800">
     <Window.Resources>
-        <!--<ResourceDictionary Source="/Styles/Style.xaml"/>-->
+        <ResourceDictionary Source="/Styles/Style.xaml"/>
         
     </Window.Resources>
 
@@ -19,80 +19,35 @@
                         Click="PrevButton_Click" >
                     <Path  Fill="Black" Data="M 0 10 L 10 0 L 10 20 Z"/>
                 </Button>
-                <!--<TextBlock Margin="5"/>
-                <Button FontSize="20" Background="Transparent" BorderThickness="0"
-                        Click="PrevButton_Click" >
-                    <Path  Fill="Black" Data="M 0 0 L 10 10 L 0 20 Z"/>
-                </Button>-->
             </StackPanel>
         </Grid>
-
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Width="120" Height="200" Margin="10">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Border Background="LightGray" BorderBrush="#999999" BorderThickness="3" CornerRadius="10" Margin="-3">
-                                <Image Source="Assets/images/burger.jpeg" Width="120" Height="120" Stretch="Fill" Margin="0,0,0,80" />
-                            </Border>
-                            <TextBlock Text="Burgers" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,124,0,0" RenderTransformOrigin="0.528,1.216" />
-                            <TextBlock Text="Descriptions" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14" Margin="0,5" />
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button Width="120" Height="200" Margin="10">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Border Background="LightGray" BorderBrush="#999999" BorderThickness="3" CornerRadius="10" Margin="-3">
-                                <Image Source="Assets/images/burger.jpeg" Width="120" Height="120" Stretch="Fill" Margin="0,0,0,80" />
-                            </Border>
-                            <TextBlock Text="Burgers" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,124,0,0" RenderTransformOrigin="0.528,1.216" />
-                            <TextBlock Text="Descriptions" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14" Margin="0,5" />
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button Width="120" Height="200" Margin="10">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Border Background="LightGray" BorderBrush="#999999" BorderThickness="3" CornerRadius="10" Margin="-3">
-                                <Image Source="Assets/images/burger.jpeg" Width="120" Height="120" Stretch="Fill" Margin="0,0,0,80" />
-                            </Border>
-                            <TextBlock Text="Burgers" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,124,0,0" RenderTransformOrigin="0.528,1.216" />
-                            <TextBlock Text="Descriptions" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14" Margin="0,5" />
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button Width="120" Height="200" Margin="10">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Border Background="LightGray" BorderBrush="#999999" BorderThickness="3" CornerRadius="10" Margin="-3">
-                                <Image Source="Assets/images/burger.jpeg" Width="120" Height="120" Stretch="Fill" Margin="0,0,0,80" />
-                            </Border>
-                            <TextBlock Text="Burgers" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,124,0,0" RenderTransformOrigin="0.528,1.216" />
-                            <TextBlock Text="Descriptions" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14" Margin="0,5" />
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button Width="120" Height="200" Margin="10">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Border Background="LightGray" BorderBrush="#999999" BorderThickness="3" CornerRadius="10" Margin="-3">
-                                <Image Source="Assets/images/burger.jpeg" Width="120" Height="120" Stretch="Fill" Margin="0,0,0,80" />
-                            </Border>
-                            <TextBlock Text="Burgers" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,124,0,0" RenderTransformOrigin="0.528,1.216" />
-                            <TextBlock Text="Descriptions" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14" Margin="0,5" />
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-        </StackPanel>
+        
+        <ItemsControl ItemsSource="{Binding BlockCollection}">
+            <ItemsControl.DataContext>
+                <local:ViewModel/>
+            </ItemsControl.DataContext>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Style="{StaticResource BlockButton}" Width="130" Height="200" Margin="10">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Border Background="LightGray" BorderBrush="#999999" BorderThickness="3" CornerRadius="10" Margin="-3">
+                                        <Image Source="{Binding ImagePath}" Width="130" Height="120" Stretch="Fill" Margin="0,0,0,80" />
+                                    </Border>
+                                    <TextBlock Text="{Binding Title}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,124,0,0" RenderTransformOrigin="0.528,1.216" />
+                                    <!--<TextBlock Text="{Binding Description}" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="14" Margin="0,5" />-->
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </Window>

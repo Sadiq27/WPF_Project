@@ -47,7 +47,7 @@
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" 
                     HorizontalAlignment="Center" Margin="10">
-            <Button Width="100" Height="100" Click="Order_Click">
+            <Button Style="{StaticResource BlockButton}" Width="100" Height="100" Click="Order_Click">
                 <Grid>
                     <Border BorderBrush="Black" 
                             BorderThickness="2" 
@@ -59,7 +59,7 @@
                                Margin="0,-22,0,-35"/>
                 </Grid>
             </Button>
-            <Button Width="100" Height="100" Margin="10,0" Click="TotalOrders_Click">
+            <Button Style="{StaticResource BlockButton}" Width="100" Height="100" Margin="10,0" Click="TotalOrders_Click">
                 <Grid>
                     <Border BorderBrush="Black"  
                             BorderThickness="2" 
@@ -70,7 +70,7 @@
                     <TextBlock Text="Total Orders" HorizontalAlignment="Center" Margin="0,-22,0,-35"/>
                 </Grid>
             </Button>
-            <Button Width="100" Height="100" Click="HistoryOrder_Click">
+            <Button Style="{StaticResource BlockButton}" Width="100" Height="100" Click="HistoryOrder_Click">
                 <Grid>
                     <Border BorderBrush="Black" BorderThickness="2" CornerRadius="5" Margin="10,-36,17,70">
                         <Image Source="Assets/images/history1.jpg" Stretch="UniformToFill" />
