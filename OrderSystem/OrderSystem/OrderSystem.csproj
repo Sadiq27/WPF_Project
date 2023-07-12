@@ -8,27 +8,39 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\images\BaconBurger.jpg" />
     <None Remove="Assets\images\Baner.jpg" />
     <None Remove="Assets\images\bg.jpg" />
     <None Remove="Assets\images\burger.jpeg" />
     <None Remove="Assets\images\burger.jpg" />
+    <None Remove="Assets\images\Cheeseburger.jpg" />
     <None Remove="Assets\images\dr.png" />
     <None Remove="Assets\images\food.jpg" />
     <None Remove="Assets\images\foodBG.jpg" />
+    <None Remove="Assets\images\HawaiianPizza.jpg" />
     <None Remove="Assets\images\history1.jpg" />
+    <None Remove="Assets\images\MargheritaPizza.jpg" />
     <None Remove="Assets\images\money.jpg" />
+    <None Remove="Assets\images\MushroomBurger.jpg" />
+    <None Remove="Assets\images\PepperoniPizza.png" />
     <None Remove="Assets\images\pizza.png" />
     <None Remove="Assets\images\reg.jpeg" />
     <None Remove="Assets\images\sushi.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\images\BaconBurger.jpg" />
     <Resource Include="Assets\images\bg.jpg" />
     <Resource Include="Assets\images\burger.jpeg" />
     <Resource Include="Assets\images\burger.jpg" />
+    <Resource Include="Assets\images\Cheeseburger.jpg" />
     <Resource Include="Assets\images\dr.png" />
+    <Resource Include="Assets\images\HawaiianPizza.jpg" />
     <Resource Include="Assets\images\history1.jpg" />
+    <Resource Include="Assets\images\MargheritaPizza.jpg" />
     <Resource Include="Assets\images\money.jpg" />
+    <Resource Include="Assets\images\MushroomBurger.jpg" />
+    <Resource Include="Assets\images\PepperoniPizza.png" />
     <Resource Include="Assets\images\pizza.png" />
   </ItemGroup>
 

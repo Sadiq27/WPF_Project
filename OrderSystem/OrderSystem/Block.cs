@@ -10,10 +10,10 @@ namespace OrderSystem
 {
     public class BlockItem : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
+        public event EventHandler? Clicked;
         private string? imagePath;
         private string? title;
-        //private string? description;
 
         public string ImagePath
         {
@@ -34,19 +34,14 @@ namespace OrderSystem
                 OnPropertyChanged(nameof(Title));
             }
         }
-
-        //public string Description
-        //{
-        //    get { return description; }
-        //    set
-        //    {
-        //        description = value;
-        //        OnPropertyChanged(nameof(Description));
-        //    }
-        //}
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public void OnClicked()
+        {
+            Clicked?.Invoke(this, EventArgs.Empty);
         }
     }
 
@@ -62,25 +57,21 @@ namespace OrderSystem
                 {
                     ImagePath = "Assets/images/burger.jpg",
                     Title = "Burgers",
-                    //Description = "Delicious burgers for real gourmets"
                 },
                 new BlockItem()
                 {
                     ImagePath = "Assets/images/pizza.png",
                     Title = "Pizzas",
-                    //Description = "Appetizing pizza with various toppings"
                 },
                 new BlockItem()
                 {
                     ImagePath = "Assets/images/sushi.jpg",
                     Title = "Sushi",
-                    //Description = "Delicate sushi, the perfect combination of freshness and taste"
                 },
                 new BlockItem()
                 {
                     ImagePath = "Assets/images/dr.png",
                     Title = "Drinks",
-                    //Description = "Refreshing drinks, a real pleasure in every sip"
                 },
             };
         }

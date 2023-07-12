@@ -1,0 +1,42 @@
+﻿<Window x:Class="OrderSystem.TotalOrders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrderSystem"
+        mc:Ignorable="d"
+        Title="TotalOrders" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Height="50" Background="#0078D7" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15">
+                <Button FontSize="20" Background="Transparent" BorderThickness="0" Click="PrevButtonOnTotalOrders_Click">
+                    <Path Fill="Black" Data="M 0 10 L 10 0 L 10 20 Z"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <ListBox Grid.Row="1" ItemsSource="{Binding CartItems}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Title}" Margin="5" />
+                        <TextBlock Text="{Binding Quantity}" Margin="5" />
+                        <TextBlock Text="{Binding Price, StringFormat=\{0:C\}}" Margin="5" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <TextBlock Text="Total: " FontSize="16" FontWeight="Bold" VerticalAlignment="Center" Margin="5" />
+            <TextBlock Text="{Binding TotalPrice, StringFormat=\{0:C\}}" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" Margin="5" />
+            <Button Content="Pay" Click="PayButton_Click" Margin="10" />
+        </StackPanel>
+    </Grid>
+</Window>

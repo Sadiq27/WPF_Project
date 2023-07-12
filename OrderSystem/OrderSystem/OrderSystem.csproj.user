@@ -7,18 +7,42 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Burgers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Dashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Order.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pizzas.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TotalOrders.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Burgers.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Dashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Order.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pizzas.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TotalOrders.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

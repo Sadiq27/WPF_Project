@@ -23,16 +23,6 @@ namespace OrderSystem
             this.DataContext = this;
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        //private void NextButton_Click(object sender, RoutedEventArgs e)
-        //{
-
-        //}
-
         private void PrevButton_Click(object sender, RoutedEventArgs e)
         {
             Dashboard dashboard = new Dashboard();
@@ -40,7 +30,36 @@ namespace OrderSystem
             Close();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is BlockItem blockItem)
+            {
+                string imagePath = blockItem.ImagePath;
+                string title = blockItem.Title;
 
+                switch (title)
+                {
+                    case "Burgers":
+                        Burgers burgers = new Burgers();
+                        burgers.Show();
+                        Close();
 
+                        break;
+                    case "Pizzas":
+                        Pizzas pizzas = new Pizzas();
+                        pizzas.Show(); 
+                        Close();
+                        break;
+                    case "Sushi":
+
+                        break;
+                    case "Drinks":
+
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
 }

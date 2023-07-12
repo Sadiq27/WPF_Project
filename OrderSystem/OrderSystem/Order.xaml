@@ -11,6 +11,10 @@
         
     </Window.Resources>
 
+    <Window.DataContext>
+        <local:ViewModel />
+    </Window.DataContext>
+
     <Grid>
         <Grid Height="50" Background="#0078D7" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15">
@@ -33,7 +37,7 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button Style="{StaticResource BlockButton}" Width="130" Height="200" Margin="10">
+                    <Button Click="Button_Click" Style="{StaticResource BlockButton}" Width="130" Height="200" Margin="10">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Grid>
@@ -49,5 +53,7 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+
+        
     </Grid>
 </Window>
