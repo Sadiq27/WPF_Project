@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrderSystem
+namespace OrderSystem.Classes
 {
-    public class BurgerItem : INotifyPropertyChanged
+    public class OrderItem : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 

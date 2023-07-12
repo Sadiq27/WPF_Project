@@ -1,8 +1,7 @@
-﻿using OrderSystem;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 
-namespace OrderSystem
+namespace OrderSystem.Classes
 {
     public class CartItem : INotifyPropertyChanged
     {

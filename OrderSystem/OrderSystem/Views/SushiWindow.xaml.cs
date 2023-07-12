@@ -1,40 +1,41 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
+using OrderSystem.Classes;
 
-namespace OrderSystem
+namespace OrderSystem.Views
 {
-    public partial class Burgers : Window
+    public partial class SushiWindow : Window
     {
-        public ObservableCollection<BurgerItem> BurgersCollection { get; set; }
+        public ObservableCollection<OrderItem> SushiCollection { get; set; }
         public ObservableCollection<CartItem> CartItems { get; set; }
 
-        public Burgers()
+        public SushiWindow()
         {
             InitializeComponent();
 
-            BurgersCollection = new ObservableCollection<BurgerItem>()
+            SushiCollection = new ObservableCollection<OrderItem>()
             {
-                new BurgerItem()
+                new OrderItem()
                 {
-                    ImagePath = "Assets/images/Cheeseburger.jpg",
-                    Title = "Cheeseburger",
+                    ImagePath = "../Assets/images/TunaRoll.png",
+                    Title = "Tuna Roll",
                     Quantity = 0,
-                    Price = 4.99m
+                    Price = 3.99m
                 },
-                new BurgerItem()
+                new OrderItem()
                 {
-                    ImagePath = "Assets/images/BaconBurger.jpg",
-                    Title = "Bacon Burger",
+                    ImagePath = "../Assets/images/SalmonNigiri.jpg",
+                    Title = "Salmon Nigiri",
                     Quantity = 0,
                     Price = 5.99m
                 },
-                new BurgerItem()
+                new OrderItem()
                 {
-                    ImagePath = "Assets/images/MushroomBurger.jpg",
-                    Title = "Mushroom Burger",
+                    ImagePath = "../Assets/images/CaliforniaRoll.jpg",
+                    Title = "California Roll",
                     Quantity = 0,
-                    Price = 6.99m
+                    Price = 7.99m
                 }
             };
 
@@ -45,39 +46,39 @@ namespace OrderSystem
 
         private void PlusButton_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is FrameworkElement element && element.DataContext is BurgerItem burger)
+            if (sender is FrameworkElement element && element.DataContext is OrderItem Sushi)
             {
-                burger.Quantity++;
+                Sushi.Quantity++;
             }
         }
 
         private void MinusButton_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is FrameworkElement element && element.DataContext is BurgerItem burger)
+            if (sender is FrameworkElement element && element.DataContext is OrderItem Sushi)
             {
-                if (burger.Quantity > 0)
-                    burger.Quantity--;
+                if (Sushi.Quantity > 0)
+                    Sushi.Quantity--;
             }
         }
 
         private void PrevButtonOnOrder_Click(object sender, RoutedEventArgs e)
         {
-            Order order = new Order();
+            OrderWindow order = new OrderWindow();
             order.Show();
             Close();
         }
 
         private void ViewCartButton_Click(object sender, RoutedEventArgs e)
         {
-            TotalOrders totalOrders = new TotalOrders();
+            TotalOrdersWindow totalOrders = new TotalOrdersWindow();
             totalOrders.Show();
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button addButton && addButton.DataContext is BurgerItem selectedBurger)
+            if (sender is Button addButton && addButton.DataContext is OrderItem selectedSushi)
             {
-                if (selectedBurger.Quantity == 0)
+                if (selectedSushi.Quantity == 0)
                 {
                     MessageBox.Show("Quantity should be greater than 0", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
@@ -85,15 +86,14 @@ namespace OrderSystem
 
                 CartItem cartItem = new CartItem()
                 {
-                    Title = selectedBurger.Title,
-                    Quantity = selectedBurger.Quantity,
-                    Price = selectedBurger.Price
+                    Title = selectedSushi.Title,
+                    Quantity = selectedSushi.Quantity,
+                    Price = selectedSushi.Price
                 };
 
                 CartItems.Add(cartItem);
                 MessageBox.Show("Item added to cart successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
-
     }
 }

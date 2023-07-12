@@ -183,4 +183,89 @@
             </Style>
         </Style.Resources>
     </Style>
+
+    <Style x:Key="BlockBorderStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="LightGray" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="CornerRadius" Value="10" />
+    </Style>
+
+    <Style x:Key="BlockImageStyle" TargetType="Image">
+        <Setter Property="Width" Value="200" />
+        <Setter Property="Height" Value="150" />
+        <Setter Property="Stretch" Value="UniformToFill" />
+    </Style>
+
+    <Style x:Key="BlockTitleStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Margin" Value="0,10,0,5" />
+    </Style>
+
+    <Style x:Key="PlusMinusAddButtonStyle" TargetType="Button">
+        <Setter Property="Width" Value="30" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="Background" Value="#F8F8F8" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="#DDDDDD" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Margin" Value="5,0" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"
+                                      Margin="5"
+                                      Content="{TemplateBinding Content}"
+                                      ContentTemplate="{TemplateBinding ContentTemplate}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#DDDDDD" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Opacity" Value="0.5" />
+                            <Setter Property="Foreground" Value="#999999" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="QuantityTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="Black" />
+    </Style>
+    <Style x:Key="BlockPriceStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="Green" />
+        <Setter Property="Margin" Value="10,5" />
+    </Style>
+
+
+
+
+
+
+
+
+
+
 </ResourceDictionary>

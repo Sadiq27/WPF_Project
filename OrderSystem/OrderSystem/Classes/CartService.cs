@@ -1,11 +1,11 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
 
-namespace OrderSystem
+namespace OrderSystem.Classes
 {
     public static class CartService
     {
-        public static void AddItemToCart(BurgerItem selectedBurger, ObservableCollection<CartItem> cartItems)
+        public static void AddItemToCart(OrderItem selectedBurger, ObservableCollection<CartItem> cartItems)
         {
             if (selectedBurger.Quantity == 0)
             {

@@ -7,42 +7,48 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Burgers.xaml.cs">
+    <Compile Update="Views\BurgersWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Cart.xaml.cs">
+    <Compile Update="Views\DashboardWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Dashboard.xaml.cs">
+    <Compile Update="Views\DrinksWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Order.xaml.cs">
+    <Compile Update="Views\OrderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pizzas.xaml.cs">
+    <Compile Update="Views\PizzasWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="TotalOrders.xaml.cs">
+    <Compile Update="Views\SushiWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TotalOrdersWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Burgers.xaml">
+    <Page Update="Views\BurgersWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Cart.xaml">
+    <Page Update="Views\DashboardWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Dashboard.xaml">
+    <Page Update="Views\DrinksWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Order.xaml">
+    <Page Update="Views\OrderWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pizzas.xaml">
+    <Page Update="Views\PizzasWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TotalOrders.xaml">
+    <Page Update="Views\SushiWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TotalOrdersWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

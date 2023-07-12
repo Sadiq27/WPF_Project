@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrderSystem
+namespace OrderSystem.Classes
 {
     public class BlockItem : INotifyPropertyChanged
     {
@@ -55,22 +55,22 @@ namespace OrderSystem
             {
                 new BlockItem()
                 {
-                    ImagePath = "Assets/images/burger.jpg",
+                    ImagePath = "../Assets/images/burger.jpg",
                     Title = "Burgers",
                 },
                 new BlockItem()
                 {
-                    ImagePath = "Assets/images/pizza.png",
+                    ImagePath = "../Assets/images/pizza.png",
                     Title = "Pizzas",
                 },
                 new BlockItem()
                 {
-                    ImagePath = "Assets/images/sushi.jpg",
+                    ImagePath = "../Assets/images/sushi.jpg",
                     Title = "Sushi",
                 },
                 new BlockItem()
                 {
-                    ImagePath = "Assets/images/dr.png",
+                    ImagePath = "../Assets/images/dr.png",
                     Title = "Drinks",
                 },
             };

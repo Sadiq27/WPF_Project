@@ -2,12 +2,13 @@
 using System.IO;
 using System.Text.Json;
 using System.Windows;
-
+using OrderSystem.Classes;
 
 namespace OrderSystem
 {
     public partial class MainWindow : Window
     {
+        string filePath = "Assets/Data/users.json";
         public MainWindow()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace OrderSystem
             };
 
             string jsonString = JsonSerializer.Serialize(user);
-            File.WriteAllText("users.json", jsonString);
+            File.WriteAllText(filePath, jsonString);
 
             MessageBox.Show("User registered successfully", "Successful", MessageBoxButton.OK, MessageBoxImage.Information);
         }
@@ -55,13 +56,13 @@ namespace OrderSystem
 
             try
             {
-                string jsonString = File.ReadAllText("users.json");
+                string jsonString = File.ReadAllText(filePath);
                 User? storedUser = JsonSerializer.Deserialize<User>(jsonString);
 
                 if (storedUser != null && storedUser.Username == username && storedUser.Password == password)
                 {
                     MessageBox.Show("Login successful", "Successful", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Dashboard dashboard = new Dashboard();
+                    Views.DashboardWindow dashboard = new Views.DashboardWindow();
                     dashboard.Show();
                     Close();
                 }

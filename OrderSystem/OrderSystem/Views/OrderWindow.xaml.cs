@@ -1,23 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using OrderSystem.Classes;
 
-namespace OrderSystem
+namespace OrderSystem.Views
 {
-    public partial class Order : Window
+    public partial class OrderWindow : Window
     {
-        public Order()
+        public OrderWindow()
         {
             InitializeComponent();
             this.DataContext = this;
@@ -25,7 +14,7 @@ namespace OrderSystem
 
         private void PrevButton_Click(object sender, RoutedEventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
+            DashboardWindow dashboard = new DashboardWindow();
             dashboard.Show();
             Close();
         }
@@ -41,19 +30,22 @@ namespace OrderSystem
                 {
                     case "Burgers":
                         Burgers burgers = new Burgers();
-                        burgers.Show();
-                        Close();
+                        burgers.Show(); Close();
 
                         break;
                     case "Pizzas":
                         Pizzas pizzas = new Pizzas();
-                        pizzas.Show(); 
-                        Close();
+                        pizzas.Show(); Close();
+
                         break;
                     case "Sushi":
+                        SushiWindow sushi = new SushiWindow();
+                        sushi.Show(); Close();
 
                         break;
                     case "Drinks":
+                        DrinksWindow drinksWindow = new DrinksWindow();
+                        drinksWindow.Show(); Close();
 
                         break;
                     default:

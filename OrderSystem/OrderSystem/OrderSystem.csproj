@@ -8,15 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Data\users.json" />
     <None Remove="Assets\images\BaconBurger.jpg" />
-    <None Remove="Assets\images\Baner.jpg" />
     <None Remove="Assets\images\bg.jpg" />
     <None Remove="Assets\images\burger.jpeg" />
     <None Remove="Assets\images\burger.jpg" />
+    <None Remove="Assets\images\CaliforniaRoll.jpg" />
     <None Remove="Assets\images\Cheeseburger.jpg" />
+    <None Remove="Assets\images\CocaCola.jpg" />
     <None Remove="Assets\images\dr.png" />
-    <None Remove="Assets\images\food.jpg" />
-    <None Remove="Assets\images\foodBG.jpg" />
+    <None Remove="Assets\images\Fanta.jpg" />
     <None Remove="Assets\images\HawaiianPizza.jpg" />
     <None Remove="Assets\images\history1.jpg" />
     <None Remove="Assets\images\MargheritaPizza.jpg" />
@@ -25,7 +26,16 @@
     <None Remove="Assets\images\PepperoniPizza.png" />
     <None Remove="Assets\images\pizza.png" />
     <None Remove="Assets\images\reg.jpeg" />
+    <None Remove="Assets\images\SalmonNigiri.jpg" />
+    <None Remove="Assets\images\Sprite.jpg" />
     <None Remove="Assets\images\sushi.jpg" />
+    <None Remove="Assets\images\TunaRoll.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Data\users.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -33,8 +43,11 @@
     <Resource Include="Assets\images\bg.jpg" />
     <Resource Include="Assets\images\burger.jpeg" />
     <Resource Include="Assets\images\burger.jpg" />
+    <Resource Include="Assets\images\CaliforniaRoll.jpg" />
     <Resource Include="Assets\images\Cheeseburger.jpg" />
+    <Resource Include="Assets\images\CocaCola.jpg" />
     <Resource Include="Assets\images\dr.png" />
+    <Resource Include="Assets\images\Fanta.jpg" />
     <Resource Include="Assets\images\HawaiianPizza.jpg" />
     <Resource Include="Assets\images\history1.jpg" />
     <Resource Include="Assets\images\MargheritaPizza.jpg" />
@@ -48,7 +61,10 @@
     <Resource Include="Assets\images\reg.jpeg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\images\SalmonNigiri.jpg" />
+    <Resource Include="Assets\images\Sprite.jpg" />
     <Resource Include="Assets\images\sushi.jpg" />
+    <Resource Include="Assets\images\TunaRoll.png" />
   </ItemGroup>
 
 </Project>

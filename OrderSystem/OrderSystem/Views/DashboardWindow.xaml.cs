@@ -1,13 +1,15 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
+using OrderSystem.Classes;
+using OrderSystem.Views;
 
-namespace OrderSystem
+namespace OrderSystem.Views
 {
-    public partial class Dashboard : Window
+    public partial class DashboardWindow : Window
     {
         public ObservableCollection<CartItem> CartItems { get; set; }
 
-        public Dashboard()
+        public DashboardWindow()
         {
             InitializeComponent();
             CartItems = CartManager.Instance.CartItems;
@@ -16,7 +18,7 @@ namespace OrderSystem
 
         private void Order_Click(object sender, RoutedEventArgs e)
         {
-            Order order = new Order();
+            OrderWindow order = new OrderWindow();
             order.Show();
             Close();
         }
@@ -28,7 +30,7 @@ namespace OrderSystem
 
         private void TotalOrders_Click(object sender, RoutedEventArgs e)
         {
-            TotalOrders totalOrders = new TotalOrders();
+            TotalOrdersWindow totalOrders = new TotalOrdersWindow();
             totalOrders.Show();
             Close();
         }
