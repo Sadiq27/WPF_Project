@@ -10,6 +10,8 @@ namespace OrderSystem.Classes
         private string? title;
         private int quantity;
         private decimal price;
+        public decimal Total => Quantity * Price;
+        public decimal TotalPrice => Quantity * Price;
 
         public string Title
         {
@@ -28,6 +30,7 @@ namespace OrderSystem.Classes
             {
                 quantity = value;
                 OnPropertyChanged(nameof(Quantity));
+                OnPropertyChanged(nameof(TotalPrice));
             }
         }
 
@@ -38,6 +41,7 @@ namespace OrderSystem.Classes
             {
                 price = value;
                 OnPropertyChanged(nameof(Price));
+                OnPropertyChanged(nameof(TotalPrice));
             }
         }
 

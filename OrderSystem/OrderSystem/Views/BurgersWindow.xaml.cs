@@ -88,7 +88,7 @@ namespace OrderSystem.Views
                 {
                     Title = selectedBurger.Title,
                     Quantity = selectedBurger.Quantity,
-                    Price = selectedBurger.Price
+                    Price = selectedBurger.Price,
                 };
 
                 CartItems.Add(cartItem);
