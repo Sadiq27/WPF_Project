@@ -23,6 +23,7 @@
     <None Remove="Assets\images\MargheritaPizza.jpg" />
     <None Remove="Assets\images\money.jpg" />
     <None Remove="Assets\images\MushroomBurger.jpg" />
+    <None Remove="Assets\images\PayBackground.jpg" />
     <None Remove="Assets\images\PepperoniPizza.png" />
     <None Remove="Assets\images\pizza.png" />
     <None Remove="Assets\images\reg.jpeg" />
@@ -53,6 +54,7 @@
     <Resource Include="Assets\images\MargheritaPizza.jpg" />
     <Resource Include="Assets\images\money.jpg" />
     <Resource Include="Assets\images\MushroomBurger.jpg" />
+    <Resource Include="Assets\images\PayBackground.jpg" />
     <Resource Include="Assets\images\PepperoniPizza.png" />
     <Resource Include="Assets\images\pizza.png" />
   </ItemGroup>

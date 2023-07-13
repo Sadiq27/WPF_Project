@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrderSystem.Views"
         mc:Ignorable="d"
-        Title="PayWindow" Height="auto" Width="400">
-    <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="White">
+        Title="PayWindow" Height="450" Width="350">
+    <Grid Height="301">
+        <Image Source="../Assets/Images/PayBackground.jpg" Stretch="Uniform" Margin="-248,-292,-113,-293"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.9" Background="White">
             <TextBlock Text="Card Number" FontSize="16" FontWeight="Bold" Margin="5"/>
             <TextBox x:Name="CardNumber" FontSize="14" Margin="5"/>
             

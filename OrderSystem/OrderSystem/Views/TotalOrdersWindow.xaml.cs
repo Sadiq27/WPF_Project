@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Windows;
 using System.Linq;
 using OrderSystem.Classes;
+using System;
 
 namespace OrderSystem.Views
 {
@@ -11,7 +12,7 @@ namespace OrderSystem.Views
         public event PropertyChangedEventHandler? PropertyChanged;
         public ObservableCollection<CartItem> CartItems { get; set; }
 
-        public decimal totalPrice;
+        public decimal totalPrice = 0;
 
         public TotalOrdersWindow()
         {
@@ -48,12 +49,28 @@ namespace OrderSystem.Views
             Close();
         }
 
-        private void PayButton_Click(object sender, RoutedEventArgs e)
+        private void PayWindow_Closed(object sender, EventArgs e)
         {
-            PayWindow payWindow = new PayWindow();
-            payWindow.Show();
+            if (CartItems == null || CartItems.Count == 0)
+            {
+                TotalPrice = 0;
+            }
         }
 
+        private void PayButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (CartItems == null || CartItems.Count == 0)
+            {
+                MessageBox.Show("No orders, please order!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                PayWindow payWindow = new PayWindow();
+                payWindow.Closed += PayWindow_Closed;
+                payWindow.Show();
+            }
+
+        }
 
         private void OnPropertyChanged(string propertyName)
         {

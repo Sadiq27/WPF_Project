@@ -66,7 +66,7 @@
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
             <TextBlock Text="Total: " FontSize="16" FontWeight="Bold" VerticalAlignment="Center" Margin="5" />
             <TextBlock Text="{Binding TotalPrice, StringFormat=\{0:C\}}" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" Margin="5" />
-            <Button Content="Pay" Click="PayButton_Click" Margin="10" Width="70" Style="{StaticResource PayButtonStyle}" />
+            <Button x:Name="PayButton" Content="Pay" Click="PayButton_Click" Margin="10" Width="70" Style="{StaticResource PayButtonStyle}" />
         </StackPanel>
 
     </Grid>
