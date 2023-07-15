@@ -48,18 +48,17 @@ namespace OrderSystem.Views
 
         private void PlusButton_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is FrameworkElement element && element.DataContext is OrderItem drink)
+            if (sender is FrameworkElement element && element.DataContext is OrderItem burger)
             {
-                drink.Quantity++;
+                BaseMethod.IncrementQuantity(burger);
             }
         }
 
         private void MinusButton_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is FrameworkElement element && element.DataContext is OrderItem drink)
+            if (sender is FrameworkElement element && element.DataContext is OrderItem burger)
             {
-                if (drink.Quantity > 0)
-                    drink.Quantity--;
+                BaseMethod.DecrementQuantity(burger);
             }
         }
 
@@ -72,23 +71,9 @@ namespace OrderSystem.Views
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button addButton && addButton.DataContext is OrderItem selectedDrink)
+            if (sender is Button addButton && addButton.DataContext is OrderItem selectedBurger)
             {
-                if (selectedDrink.Quantity == 0)
-                {
-                    MessageBox.Show("Quantity should be greater than 0", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-
-                CartItem cartItem = new CartItem()
-                {
-                    Title = selectedDrink.Title,
-                    Quantity = selectedDrink.Quantity,
-                    Price = selectedDrink.Price
-                };
-
-                CartItems.Add(cartItem);
-                MessageBox.Show("Item added to cart successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                BaseMethod.AddToCart(selectedBurger, CartItems);
             }
         }
     }

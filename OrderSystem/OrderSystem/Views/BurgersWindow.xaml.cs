@@ -48,7 +48,7 @@ namespace OrderSystem.Views
         {
             if (sender is FrameworkElement element && element.DataContext is OrderItem burger)
             {
-                burger.Quantity++;
+                BaseMethod.IncrementQuantity(burger);
             }
         }
 
@@ -56,8 +56,7 @@ namespace OrderSystem.Views
         {
             if (sender is FrameworkElement element && element.DataContext is OrderItem burger)
             {
-                if (burger.Quantity > 0)
-                    burger.Quantity--;
+                BaseMethod.DecrementQuantity(burger);
             }
         }
 
@@ -72,21 +71,7 @@ namespace OrderSystem.Views
         {
             if (sender is Button addButton && addButton.DataContext is OrderItem selectedBurger)
             {
-                if (selectedBurger.Quantity == 0)
-                {
-                    MessageBox.Show("Quantity should be greater than 0", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-
-                CartItem cartItem = new CartItem()
-                {
-                    Title = selectedBurger.Title,
-                    Quantity = selectedBurger.Quantity,
-                    Price = selectedBurger.Price,
-                };
-
-                CartItems.Add(cartItem);
-                MessageBox.Show("Item added to cart successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                BaseMethod.AddToCart(selectedBurger, CartItems);
             }
         }
     }
