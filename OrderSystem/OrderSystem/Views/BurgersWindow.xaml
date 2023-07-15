@@ -12,6 +12,7 @@
     </Window.Resources>
 
     <Grid>
+        <Image Source="../Assets/images/background.jpg" Stretch="Uniform" Margin="-103,-43,-103,-43"/>
         <Grid Height="50" Background="#0078D7" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15">
 

@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="Assets\Data\history.json" />
     <None Remove="Assets\Data\users.json" />
+    <None Remove="Assets\images\background.jpg" />
     <None Remove="Assets\images\BaconBurger.jpg" />
     <None Remove="Assets\images\bg.jpg" />
     <None Remove="Assets\images\burger.jpeg" />
@@ -44,6 +45,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\images\background.jpg" />
     <Resource Include="Assets\images\BaconBurger.jpg" />
     <Resource Include="Assets\images\bg.jpg" />
     <Resource Include="Assets\images\burger.jpeg" />
