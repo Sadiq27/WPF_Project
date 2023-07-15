@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrderSystem.Views"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="PayWindow" Height="450" Width="350">
     <Grid Height="301">
         <Image Source="../Assets/Images/PayBackground.jpg" Stretch="Uniform" Margin="-248,-292,-113,-293"/>

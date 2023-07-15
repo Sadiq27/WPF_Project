@@ -4,6 +4,8 @@ using System.Windows;
 using System.Linq;
 using OrderSystem.Classes;
 using System;
+using System.IO;
+using System.Runtime.Serialization.Json;
 
 namespace OrderSystem.Views
 {
@@ -65,11 +67,20 @@ namespace OrderSystem.Views
             }
             else
             {
+                SaveCartItemsToJson();
                 PayWindow payWindow = new PayWindow();
                 payWindow.Closed += PayWindow_Closed;
                 payWindow.Show();
             }
+        }
+        private void SaveCartItemsToJson()
+        {
+            var serializer = new DataContractJsonSerializer(typeof(ObservableCollection<CartItem>));
 
+            using (var fileStream = new FileStream("history.json", FileMode.Create))
+            {
+                serializer.WriteObject(fileStream, CartItems);
+            }
         }
 
         private void OnPropertyChanged(string propertyName)

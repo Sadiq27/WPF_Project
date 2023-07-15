@@ -16,6 +16,9 @@
     <Compile Update="Views\DrinksWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\HistoryOrderWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\OrderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\DrinksWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HistoryOrderWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\OrderWindow.xaml">

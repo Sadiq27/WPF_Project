@@ -23,7 +23,6 @@ namespace OrderSystem.Views
         {
             if (sender is Button button && button.DataContext is BlockItem blockItem)
             {
-                string imagePath = blockItem.ImagePath;
                 string title = blockItem.Title;
 
                 switch (title)

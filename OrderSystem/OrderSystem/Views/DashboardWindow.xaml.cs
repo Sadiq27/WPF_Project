@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
 using OrderSystem.Classes;
-using OrderSystem.Views;
 
 namespace OrderSystem.Views
 {
@@ -25,7 +24,9 @@ namespace OrderSystem.Views
 
         private void HistoryOrder_Click(object sender, RoutedEventArgs e)
         {
-
+            HistoryOrderWindow historyOrder = new HistoryOrderWindow();
+            historyOrder.Show();
+            Close();
         }
 
         private void TotalOrders_Click(object sender, RoutedEventArgs e)

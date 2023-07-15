@@ -10,18 +10,20 @@ namespace OrderSystem.Views
         {
             InitializeComponent();
             this.DataContext = this;
-
         }
 
         private void PayButton_Click(object sender, RoutedEventArgs e)
             {
-            bool check = string.IsNullOrWhiteSpace(CardNumber.Text) || string.IsNullOrWhiteSpace(ExpirationDate.Text) ||
-                                string.IsNullOrWhiteSpace(CVV.Text) || string.IsNullOrWhiteSpace(DeliveryAddress.Text);
-                if (check)
-                    {
-                        MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                        return;
-                    }
+            bool CardNumberCheck = string.IsNullOrWhiteSpace(CardNumber.Text);
+            bool ExpirationDateCheck = string.IsNullOrWhiteSpace(ExpirationDate.Text);
+            bool CVVCheck = string.IsNullOrWhiteSpace(CVV.Text);
+            bool DeliveryAddressCheck = string.IsNullOrWhiteSpace(DeliveryAddress.Text);
+
+            if (CardNumberCheck || ExpirationDateCheck || CVVCheck || DeliveryAddressCheck)
+                {
+                    MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
 
             MessageBox.Show("Payment successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             ClearCart();
@@ -30,7 +32,6 @@ namespace OrderSystem.Views
         private void ClearCart()
         {
             TotalOrdersWindow totalOrdersWindow = new TotalOrdersWindow();
-
             totalOrdersWindow.CartItems.Clear();
             totalOrdersWindow.Close();
             Close();

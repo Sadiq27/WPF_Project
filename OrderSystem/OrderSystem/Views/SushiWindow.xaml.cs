@@ -68,12 +68,6 @@ namespace OrderSystem.Views
             Close();
         }
 
-        private void ViewCartButton_Click(object sender, RoutedEventArgs e)
-        {
-            TotalOrdersWindow totalOrders = new TotalOrdersWindow();
-            totalOrders.Show();
-        }
-
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button addButton && addButton.DataContext is OrderItem selectedSushi)

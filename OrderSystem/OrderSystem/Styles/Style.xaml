@@ -151,6 +151,7 @@
     <Style x:Key="BlockButton" TargetType="Button">
         <Setter Property="Width" Value="100"/>
         <Setter Property="Height" Value="100"/>
+        <Setter Property="Margin" Value="5,0"/>
         <Setter Property="Background" Value="#F0F0F0"/>
         <Setter Property="BorderBrush" Value="#CCCCCC"/>
         <Setter Property="BorderThickness" Value="2"/>
@@ -188,7 +189,7 @@
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Margin" Value="10" />
         <Setter Property="Padding" Value="10" />
-        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="CornerRadius" Value="5" />
     </Style>
 
     <Style x:Key="BlockImageStyle" TargetType="Image">
@@ -201,6 +202,7 @@
         <Setter Property="FontSize" Value="16" />
         <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="Margin" Value="0,10,0,5" />
+        <Setter Property="HorizontalAlignment" Value="Center" />   
     </Style>
 
     <Style x:Key="PlusMinusAddButtonStyle" TargetType="Button">
@@ -248,6 +250,7 @@
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Margin" Value="5,0"/>
     </Style>
     <Style x:Key="BlockPriceStyle" TargetType="TextBlock">
         <Setter Property="FontSize" Value="14" />
@@ -255,7 +258,7 @@
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Foreground" Value="Green" />
-        <Setter Property="Margin" Value="10,5" />
+        <Setter Property="Margin" Value="5,0" />
     </Style>
 
     <Style TargetType="DataGridColumnHeader">
